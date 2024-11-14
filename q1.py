@@ -23,10 +23,10 @@ def initial_processing_mapper(line):
     
     # Check if the source is a drug (starts with 'Compound::')
     compound_gene_edges = ["CuG", "CbG", "CdG"]
-    compound_treatment_edges = ["CtD", "CpD"];
+    compound_disease_edges = ["CtD", "CpD"];
     
     gene_count = 1 if metaedge in compound_gene_edges else 0;
-    disease_count = 1 if metaedge in compound_treatment_edges else 0;
+    disease_count = 1 if metaedge in compound_disease_edges else 0;
     
     return (source, (destination, gene_count, disease_count))
 
