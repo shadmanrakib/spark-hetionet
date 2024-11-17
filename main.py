@@ -3,8 +3,8 @@ from queries import query1, query2, query3
 from pyspark import SparkContext, SparkConf
 
 @click.command()
-@click.option('--nodes_file_path', prompt='Nodes.tsv filepath', help='ex: hetionet/nodes.tsv', default='hetionet/nodes.tsv')
-@click.option('--edges_file_path', prompt='Edges.tsv filepath', help='ex: hetionet/edges.tsv', default='hetionet/edges.tsv')
+@click.option('--nodes_file_path', prompt='Nodes.tsv file path', help='ex: hetionet/nodes.tsv', default='hetionet/nodes.tsv')
+@click.option('--edges_file_path', prompt='Edges.tsv file  dpath', help='ex: hetionet/edges.tsv', default='hetionet/edges.tsv')
 def cli(nodes_file_path, edges_file_path):
     conf = SparkConf().setAppName("Hetionet")
     sc = SparkContext(conf=conf)
